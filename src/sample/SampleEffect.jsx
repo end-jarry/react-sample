@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// NOTE : useEffect를 사용하여 API 호출하기 ( GET )
 function SampleEffect() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -7,7 +8,6 @@ function SampleEffect() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // jsonplaceholder.typicode.com/guide/
       try {
         const response = await fetch(
           'https://jsonplaceholder.typicode.com/posts',
@@ -43,7 +43,6 @@ function SampleEffect() {
         {data.map((post) => (
           <li key={post.id}>
             <h3>{post.title}</h3>
-            <p>{post.body}</p>
           </li>
         ))}
       </ul>
