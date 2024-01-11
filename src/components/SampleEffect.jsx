@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function MyComponent() {
+function SampleEffect() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -51,4 +51,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default SampleEffect;
